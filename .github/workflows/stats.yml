@@ -30,21 +30,24 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v6
 
-      # Totals card: commits, PRs, issues (count_private adds private work)
+      # Totals card: commits only (count_private adds private work).
+      # PRs and issues are hidden: the fine-grained token cannot see the ones in
+      # private repos, so the card would show 0 and 1 instead of the real numbers.
       - name: Generate GitHub stats
         uses: stats-organization/github-readme-stats-action@v2
         with:
           card: stats
-          options: "username=${{ github.repository_owner }}&show_icons=true&hide_title=true&hide_border=true&theme=transparent&include_all_commits=true&count_private=true&hide=stars,contribs&rank_icon=github&number_format=long"
+          options: "username=${{ github.repository_owner }}&show_icons=true&hide_title=true&hide_border=true&theme=transparent&include_all_commits=true&count_private=true&hide=stars,contribs,prs,issues&rank_icon=github&number_format=long"
           path: profile/stats.svg
           token: ${{ secrets.STATS_TOKEN }}
 
-      # Languages card: top 6 languages across the owner's repos, notebooks left out
+      # Languages card: top 6 languages across the owner's repos,
+      # notebooks and LaTeX report files (TeX, BibTeX Style) left out
       - name: Generate language stats
         uses: stats-organization/github-readme-stats-action@v2
         with:
           card: top-langs
-          options: "username=${{ github.repository_owner }}&layout=compact&hide_title=true&hide_border=true&theme=transparent&langs_count=6&hide=Jupyter%20Notebook&size_weight=0.5&count_weight=0.5"
+          options: "username=${{ github.repository_owner }}&layout=compact&hide_title=true&hide_border=true&theme=transparent&langs_count=6&hide=Jupyter%20Notebook,TeX,BibTeX%20Style&size_weight=0.5&count_weight=0.5"
           path: profile/top-langs.svg
           token: ${{ secrets.STATS_TOKEN }}
 
