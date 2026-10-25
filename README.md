@@ -17,7 +17,7 @@
 
 **Education**
 
-Apprenticeship in electronics → HTL engineering degree → ETH Zurich, computer science and electronics → PhD, ETH Zurich → now MSc Computer Science, EPFL
+Apprenticeship in electronics → HTL engineering degree → ETH Zurich, computer science and electronics → PhD, ETH Zurich → EMBA, IMD → now MSc Computer Science, EPFL
 
 **Working with**
 
@@ -28,6 +28,7 @@ Apprenticeship in electronics → HTL engineering degree → ETH Zurich, compute
 ![STM32](https://img.shields.io/badge/STM32-03234B?style=flat-square&logo=stmicroelectronics&logoColor=white)
 ![MATLAB](https://img.shields.io/badge/MATLAB-E16737?style=flat-square)
 ![Simulink](https://img.shields.io/badge/Simulink-0076A8?style=flat-square)
+![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black)
 
 **Started out with**
 
